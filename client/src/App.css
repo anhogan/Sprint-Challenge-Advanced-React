@@ -31,3 +31,34 @@
     transform: rotate(360deg);
   }
 }
+
+.header {
+  align-items: center;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  padding: 1%;
+  width: 100%;
+}
+
+.dark-mode-toggle {
+  background: violet;
+  border-radius: 50px;
+  border: 1px solid black;
+  height: 20px;
+  width: 40px;
+}
+
+.toggle {
+  background: snow;
+  border-radius: 50px;
+  height: 20px;
+  /* left: 0; */
+  position: absolute;
+  transition: 0.2s;
+  width: 20px;
+}
+
+.toggled {
+  right: 230px;
+}
