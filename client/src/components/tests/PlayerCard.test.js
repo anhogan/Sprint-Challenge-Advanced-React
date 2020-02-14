@@ -14,3 +14,5 @@
 //     {container});
 //   expect(player).toBeInTheDocument();
 // });
+
+// HOW DO YOU PASS PROPS?
