@@ -16,7 +16,7 @@ test('Player section div renders', () => {
 
 test('Player cards render', async () => {
   const { getByText } = render(<App />);
-  const player = await waitForElement(() => 
+  const player = await waitForElement(() => // Cannot read property length of undefined
     getByText('.player-section', /alex morgan/i),
     {container: '.player-section'});
   expect(player).toBeInTheDocument();
