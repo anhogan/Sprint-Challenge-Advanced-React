@@ -13,9 +13,10 @@ const Header = () => {
     <div className="header">
       <h1>Women's World Cup Players</h1>
       <div className="dark-mode-toggle">
-        <div 
+        <div
           onClick={toggleMode} 
-          className={darkMode ? 'darkMode on' : 'darkMode'} />
+          className={darkMode ? 'darkMode on' : 'darkMode'}
+          data-testid="toggle-switch" />
       </div>
     </div>
   );

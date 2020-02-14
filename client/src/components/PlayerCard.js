@@ -1,9 +1,8 @@
 import React from 'react';
-import { PlayerSection, PlayerCardDiv, PlayerName, PlayerCountry, PlayerSearches } from './StyledComponents';
 
 const PlayerCard = (props) => {
   return (
-    <div className="player-section">
+    <div data-testid="player-section" className="player-section">
       {props.players.map(player => (
         <div className="player-div" key={player.id}>
           <h2 className="player-name">{player.name}</h2>
