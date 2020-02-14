@@ -34,7 +34,7 @@
 
 .header {
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   display: flex;
   justify-content: space-around;
   padding: 1%;
@@ -49,16 +49,76 @@
   width: 40px;
 }
 
-.toggle {
+.darkMode {
   background: snow;
   border-radius: 50px;
   height: 20px;
-  /* left: 0; */
   position: absolute;
   transition: 0.2s;
   width: 20px;
 }
 
-.toggled {
+.on {
   right: 230px;
+}
+
+.player-section {
+  display: flex;
+  flex-wrap: wrap;
+  background: violet;
+  padding: 1%;
+}
+
+.player-div {
+  width: 20%;
+  margin: 1%;
+  padding: 1%;
+  background: snow;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.player-name {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.player-country {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.player-searches {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.dark-mode .header {
+  background: black;
+  border-bottom: 2px solid snow;
+}
+
+.dark-mode .dark-mode-toggle {
+  border: 1px solid snow;
+}
+
+.dark-mode h1 {
+  color: snow; 
+}
+
+.dark-mode .player-div {
+  background: black;
+  border-color: snow;
+}
+
+.dark-mode .player-name {
+  color: snow;
+}
+
+.dark-mode .player-country {
+  color: snow;
+}
+
+.dark-mode .player-searches {
+  color: snow;
 }

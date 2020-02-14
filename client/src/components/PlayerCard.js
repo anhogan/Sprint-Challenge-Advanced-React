@@ -3,15 +3,15 @@ import { PlayerSection, PlayerCardDiv, PlayerName, PlayerCountry, PlayerSearches
 
 const PlayerCard = (props) => {
   return (
-    <PlayerSection>
+    <div className="player-section">
       {props.players.map(player => (
-        <PlayerCardDiv key={player.id}>
-          <PlayerName>{player.name}</PlayerName>
-          <PlayerCountry>{player.country}</PlayerCountry>
-          <PlayerSearches>Searches: {player.searches}</PlayerSearches>
-        </PlayerCardDiv>
+        <div className="player-div" key={player.id}>
+          <h2 className="player-name">{player.name}</h2>
+          <h4 className="player-country">{player.country}</h4>
+          <p className="player-searches">Searches: {player.searches}</p>
+        </div>
       ))}
-    </PlayerSection>
+    </div>
   );
 };
 
