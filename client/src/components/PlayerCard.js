@@ -1,16 +1,17 @@
 import React from 'react';
+import { PlayerSection, PlayerCardDiv, PlayerName, PlayerCountry, PlayerSearches } from './StyledComponents';
 
 const PlayerCard = (props) => {
   return (
-    <div>
+    <PlayerSection>
       {props.players.map(player => (
-        <div key={player.id}>
-          <h2>{player.name}</h2>
-          <h4>{player.country}</h4>
-          <p>Searches: {player.searches}</p>
-        </div>
+        <PlayerCardDiv key={player.id}>
+          <PlayerName>{player.name}</PlayerName>
+          <PlayerCountry>{player.country}</PlayerCountry>
+          <PlayerSearches>Searches: {player.searches}</PlayerSearches>
+        </PlayerCardDiv>
       ))}
-    </div>
+    </PlayerSection>
   );
 };
 

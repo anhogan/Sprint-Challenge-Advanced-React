@@ -4,15 +4,12 @@ import axios from 'axios';
 const useFetch = (url, options) => {
   const [response, setResponse] = useState([]);
   const [error, setError] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setIsLoading(true);
     axios.get(url)
       .then(response => {
         console.log(response.data);
         setResponse(response.data);
-        setIsLoading(false);
       })
       .catch(error => {
         console.log(error.message);
@@ -20,7 +17,7 @@ const useFetch = (url, options) => {
       });
   }, []);
 
-  return { response, error, isLoading };
+  return { response, error };
 };
 
 export default useFetch;
