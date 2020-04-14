@@ -2,16 +2,15 @@ import React from 'react';
 import { render, waitForElement, getByText } from '@testing-library/react';
 import PlayerCard from '../PlayerCard';
 
-test('Player section div renders', (props) => {
+test('Player section div renders', () => {
   const { getByTestId } = render(<PlayerCard />);
   getByTestId(/player-section/i);
 });
 
-test('Player cards render', async (props) => {
-  const { getByText } = render(<PlayerCard />);
+test('Player cards render', async () => {
+  const { getByTestId } = render(<PlayerCard />);
   const player = await waitForElement(() => 
-    getByText(container, /alex morgan/i),
-    {container});
+    getByTestId(/player-section/i));
   expect(player).toBeInTheDocument();
 });
 
